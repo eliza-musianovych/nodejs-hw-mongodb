@@ -22,7 +22,7 @@ router.post('/contacts',
 router.patch('/contacts/:contactId',
     ctrlWrapper(patchContactController));
 
-router.delete('contacts/:contactId',
+router.delete('/contacts/:contactId',
     ctrlWrapper(deleteContactConroller));
 
 export default router;
