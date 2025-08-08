@@ -24,3 +24,5 @@ router.patch('/contacts/:contactId',
 
 router.delete('contacts/:contactId',
     ctrlWrapper(deleteContactConroller));
+
+export default router;
