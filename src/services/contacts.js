@@ -32,7 +32,7 @@ export const patchContact = async (
     if (!rawResult || !rawResult.value) return null;
 
     return {
-        constact: rawResult.value,
+        contact: rawResult.value,
     };
 };
 
