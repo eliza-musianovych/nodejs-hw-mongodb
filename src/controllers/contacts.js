@@ -41,7 +41,7 @@ export const getContactsByIdContoller = async (req, res) => {
         });
     };
 
-export const createContactConroller = async (req,res) => {
+export const createContactConroller = async (req, res, next) => {
     const contact = await createContact(req.body);
 
     res.status(201).json({
