@@ -1,10 +1,10 @@
-import { THIRTY_DAYS } from "../constans";
+import { THIRTY_DAYS } from "../constans/index.js";
 import {
     loginUser,
     registerUser,
     refreshUserSession,
     logoutUser
-} from "../services/auth";
+} from "../services/auth.js";
 
 export const registerUserController = async (req, res) => {
     const user = await registerUser(req.body);
