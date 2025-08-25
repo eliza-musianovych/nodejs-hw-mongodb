@@ -15,24 +15,24 @@ import {
 const router = Router();
 
 router.post(
-    '/auth/register',
+    '/register',
     validateBody(registerUserSchema),
     ctrlWrapper(registerUserController),
 );
 
 router.post(
-    '/auth/login',
+    '/login',
     validateBody(loginUserSchema),
     ctrlWrapper(loginUserController),
 );
 
 router.post(
-    '/auth/refresh',
+    '/refresh',
     ctrlWrapper(refreshUserSessionConroller),
 );
 
 router.post(
-    '/auth/logout',
+    '/logout',
     ctrlWrapper(logoutUserConroller),
 );
 

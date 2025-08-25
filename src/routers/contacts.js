@@ -16,23 +16,23 @@ const router = Router();
 
 router.use(authenticate);
 
-router.get('/contacts',
+router.get('/',
     ctrlWrapper(getContactsConroller));
 
-router.get('/contacts/:contactId',
+router.get('/:contactId',
     isValidId,
     ctrlWrapper(getContactsByIdContoller));
 
-router.post('/contacts',
+router.post('/',
     validateBody(createContactSchema),
     ctrlWrapper(createContactConroller));
 
-router.patch('/contacts/:contactId',
+router.patch('/:contactId',
     isValidId,
     validateBody(updateContactSchema),
     ctrlWrapper(patchContactController));
 
-router.delete('/contacts/:contactId',
+router.delete('/:contactId',
     isValidId,
     ctrlWrapper(deleteContactConroller));
 

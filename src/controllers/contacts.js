@@ -45,7 +45,7 @@ export const getContactsByIdContoller = async (req, res) => {
 export const createContactConroller = async (req, res, next) => {
     const contactData = {
         ...req.body,
-        usedId: req.user._id,
+        userId: req.user._id,
     };
 
     const contact = await createContact(contactData);
