@@ -1,4 +1,3 @@
-import createHttpError from "http-errors";
 import { THIRTY_DAYS } from "../constans/index.js";
 import {
     loginUser,
@@ -80,12 +79,7 @@ export const logoutUserConroller = async (req, res) => {
 };
 
 export const sendResetEmailConroller = async (req, res, next) => {
-    const result = await sendResetToken(req.body.email);
-
-    if (!result) {
-       next(createHttpError(500, 'Failed to send the email, please try again later.'));
-       return;
-    }
+await sendResetToken(req.body.email);
 
     res.json({
        status: 200,
