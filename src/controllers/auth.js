@@ -5,7 +5,7 @@ import {
     registerUser,
     refreshUserSession,
     logoutUser,
-    sentResetToken,
+    sendResetToken,
     resetPwd
 } from "../services/auth.js";
 
@@ -80,7 +80,7 @@ export const logoutUserConroller = async (req, res) => {
 };
 
 export const sendResetEmailConroller = async (req, res, next) => {
-    const result = await sentResetToken(req.body.email);
+    const result = await sendResetToken(req.body.email);
 
     if (!result) {
        next(createHttpError(500, 'Failed to send the email, please try again later.'));
