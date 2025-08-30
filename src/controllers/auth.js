@@ -79,7 +79,7 @@ export const logoutUserConroller = async (req, res) => {
     res.status(204).send();
 };
 
-export const sentResetEmailConroller = async (req, res, next) => {
+export const sendResetEmailConroller = async (req, res, next) => {
     const result = await sentResetToken(req.body.email);
 
     if (!result) {

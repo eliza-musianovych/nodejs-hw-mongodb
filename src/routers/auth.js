@@ -41,9 +41,9 @@ router.post(
 );
 
 router.post(
-    '/sent-reset-email',
-    validateBody(sentResetEmailSchema),
-    ctrlWrapper(sentResetEmailConroller),
+    '/send-reset-email',
+    validateBody(sendResetEmailSchema),
+    ctrlWrapper(sendResetEmailConroller),
 );
 
 router.post(
