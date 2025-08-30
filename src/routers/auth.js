@@ -4,7 +4,7 @@ import {
     loginUserSchema,
     registerUserSchema,
     resetPwdSchema,
-    sentResetEmailSchema
+    sendResetEmailSchema
 } from "../validation/auth.js";
 import { ctrlWrapper } from "../utils/ctrlWrapper.js";
 import {
@@ -13,7 +13,7 @@ import {
     refreshUserSessionConroller,
     registerUserController,
     resetPwdController,
-    sentResetEmailConroller
+    sendResetEmailConroller
 } from "../controllers/auth.js";
 
 const router = Router();
