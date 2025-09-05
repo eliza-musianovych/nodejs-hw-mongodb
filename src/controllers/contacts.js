@@ -12,7 +12,7 @@ export const getContactsConroller = async (req, res) => {
         const { sortOrder, sortBy } = parseSortParams(req.query);
         const filter = parseFilterParams(req.query);
 
-        const students = await getAllContacts({
+        const contacts = await getAllContacts({
             page,
             perPage,
             sortBy,
@@ -24,7 +24,7 @@ export const getContactsConroller = async (req, res) => {
         res.status(200).json({
            status: 200,
            message: "Successfully found contacts!",
-           data: students,
+           data: contacts,
         });
     };
 

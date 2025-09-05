@@ -133,7 +133,6 @@ export const sendResetToken = async (email) => {
 
 export const resetPwd = async (payload) => {
     let entries;
-
     try {
         entries = jwt.verify(payload.token,
             getEnvVar('JWT_SECRET')
