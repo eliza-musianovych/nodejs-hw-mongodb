@@ -88,7 +88,7 @@ await sendResetToken(req.body.email);
     });
 };
 
-export const resetPwdController = async (res, req) => {
+export const resetPwdController = async (req, res) => {
     await resetPwd(req.body);
     res.json({
         status: 200,
